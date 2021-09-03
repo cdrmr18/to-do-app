@@ -34,13 +34,16 @@ body {
   display: flex;
   align-items: center;
 }
-
+.to-do-list-items,
+.input-todo {
+  border-radius: 4px;
+  overflow: hidden;
+}
 .todo-item-container,
 .input-todo {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  border-top: 1px solid gray;
   border-bottom: 1px solid gray;
   background-color: #25283c;
   padding: 8px 16px;
