@@ -18,10 +18,21 @@ body {
   margin-top: 100px;
   border-radius: 4px;
 }
+.delete-item {
+  padding-right: 16px;
+}
 .individual-task-container {
   border-bottom: 1px solid gray;
+  display: flex;
+  align-items: center;
 }
-
+.input-details {
+  display: flex;
+}
+.input-todo,
+.individual-task-container {
+  height: 88px;
+}
 .input-todo input {
   flex: 1;
   background-color: transparent;
@@ -39,7 +50,6 @@ body {
 
 .task-description {
   color: gray;
-  padding: 0px 24px 8px 24px;
 }
 
 .task-details {
@@ -55,13 +65,13 @@ body {
   border-radius: 4px;
   overflow: hidden;
 }
+.todo-item-container {
+  height: 56px;
+}
 .todo-item-container,
 .input-todo {
   display: flex;
   align-items: center;
-  justify-content: space-between;
-  height: 64px;
-  /* border-bottom: 1px solid gray; */
   background-color: #25283c;
   padding: 0px 16px;
   width: 100%;
@@ -76,5 +86,6 @@ body {
 
 .user-input {
   display: flex;
-  flex-direction: column;
+  /* flex-direction: column; */
+  flex-grow: 1;
 }
