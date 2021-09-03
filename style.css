@@ -11,6 +11,9 @@ body {
   border: 1px solid yellow;
   margin-right: 16px;
 }
+.complete {
+  background-color: green;
+}
 
 .container {
   background-color: grey;

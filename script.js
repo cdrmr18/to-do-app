@@ -10,7 +10,12 @@ const deleteTask = (e) => {
 }
 
 const markComplete = (e) => {
-    e.target.style.backgroundColor = "green";
+    if (e.target.classList.contains('complete')) {
+        e.target.classList.remove("complete");
+    } else {
+        // e.target.style.backgroundColor = "green";
+        e.target.className += ' complete'
+    }
 }
 
 const createTask = () => {
