@@ -18,6 +18,9 @@ body {
   margin-top: 100px;
   border-radius: 4px;
 }
+.individual-task-container {
+  border-bottom: 1px solid gray;
+}
 
 .input-todo input {
   flex: 1;
@@ -28,6 +31,19 @@ body {
 
 .input-todo input {
   outline: none;
+}
+
+.tasks-container {
+  display: flex;
+}
+
+.task-description {
+  color: gray;
+  padding: 0px 24px 8px 24px;
+}
+
+.task-details {
+  flex-grow: 1;
 }
 
 .todo-item {
@@ -42,12 +58,12 @@ body {
 .todo-item-container,
 .input-todo {
   display: flex;
-  justify-content: space-between;
   align-items: center;
-  border-bottom: 1px solid gray;
+  justify-content: space-between;
+  height: 64px;
+  /* border-bottom: 1px solid gray; */
   background-color: #25283c;
-  padding: 8px 16px;
-  height: 50px;
+  padding: 0px 16px;
   width: 100%;
 }
 
@@ -56,4 +72,9 @@ body {
   width: 100%;
   color: white;
   border-radius: 4px;
+}
+
+.user-input {
+  display: flex;
+  flex-direction: column;
 }
