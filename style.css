@@ -17,15 +17,26 @@ h1 {
   max-width: 80%;
   margin-top: 100px;
 }
-/* .input-todo input {
-} */
+.input-todo input {
+  flex: 1;
+  background-color: transparent;
+  border: none;
+  color: white;
+}
+.input-todo input {
+  outline: none;
+}
 .todo-item {
   display: flex;
   align-items: center;
 }
-.todo-item,
-.input-todo input {
-  border: 1px solid pink;
+.todo-item-container,
+.input-todo {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-top: 1px solid gray;
+  border-bottom: 1px solid gray;
   background-color: #25283c;
   padding: 8px 16px;
   height: 50px;
