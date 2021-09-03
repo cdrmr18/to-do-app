@@ -1,10 +1,13 @@
 
-const inputEnter = (event) => {
-    const task = document.getElementById('user-to-do-input').value;
-    createTask(task);
+const onEnter = (e) => {
+    if (e.key === "Enter") {
+        createTask();
+    }
 }
 
-const createTask = (task) => {
+const createTask = () => {
+    let task = document.getElementById('user-to-do-input').value;
+    let toDoList = document.querySelector('.to-do-list-items');
     let taskItem = `
         <div class="todo-item-container">
                 <div class="todo-item">
@@ -16,6 +19,7 @@ const createTask = (task) => {
                 </div>
          </div>
     `;
-    console.log(taskItem);
+    toDoList.insertAdjacentHTML('beforeend', taskItem);
+    // console.log();
 }
 
