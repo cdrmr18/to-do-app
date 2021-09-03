@@ -9,6 +9,10 @@ const deleteTask = (e) => {
     e.target.parentElement.remove();
 }
 
+const markComplete = (e) => {
+    e.target.style.backgroundColor = "green";
+}
+
 const createTask = () => {
     let task = document.getElementById('user-input-title').value;
     let details = document.getElementById('user-input-details').value;
@@ -16,7 +20,7 @@ const createTask = () => {
     let taskItem = `
         <div class="individual-task-container">
                 <div class="todo-item-container">
-                    <div class="check"></div>
+                    <div class="check" onclick="markComplete(event)"></div>
                     <!-- <div class="tasks-container"> -->
                     <div class="task-full-info">
                         <div class="task-details">
