@@ -1,9 +1,9 @@
+/* main styles */
 body {
   background: #181824 !important;
 }
-h1 {
-  border: 1px solid blue;
-}
+
+/* class styles */
 .check {
   height: 20px;
   width: 20px;
@@ -11,25 +11,30 @@ h1 {
   border: 1px solid yellow;
   margin-right: 16px;
 }
+
 .container {
-  border: 1px solid green;
   background-color: grey;
   max-width: 80%;
   margin-top: 100px;
+  border-radius: 4px;
 }
+
 .input-todo input {
   flex: 1;
   background-color: transparent;
   border: none;
   color: white;
 }
+
 .input-todo input {
   outline: none;
 }
+
 .todo-item {
   display: flex;
   align-items: center;
 }
+
 .todo-item-container,
 .input-todo {
   display: flex;
@@ -42,8 +47,10 @@ h1 {
   height: 50px;
   width: 100%;
 }
+
 .to-do-list-items {
   background-color: #25283c;
   width: 100%;
   color: white;
+  border-radius: 4px;
 }
