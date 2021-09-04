@@ -40,7 +40,7 @@ form {
 
 .container {
   max-width: 80%;
-  margin-top: 100px;
+  margin-top: 32px;
   border-radius: 4px;
 }
 
@@ -93,6 +93,6 @@ form {
   flex: 1;
   background-color: transparent;
   border: none;
-  color: white;
+  color: black;
   outline: none;
 }

@@ -34,15 +34,15 @@
                             <div class="check"></div>
                             <div class="task-input-container">
                                 <div class="task-details">
-                                        <input id="user-input-title" type="text" placeholder="Add a new task" onkeyup="onEnter(event)">
+                                        <input id="user-input-title" type="text" placeholder="Add a new task" >
                                 </div>
                                 <div class="task-description">
-                                    <input id="user-input-details" class="mt-2" type="text" placeholder="Enter task details" onkeyup="onEnter(event)">
+                                    <input id="user-input-details" class="mt-2" type="text" placeholder="Enter task details" >
                                 </div>
                             </div>
                         </div>
                         <div>
-                            <button class="btn add-button-bg" type="submit">➕</button>
+                            <button id="to-do-button" class="btn add-button-bg" type="submit" onclick="createTask(event)">➕</button>
                         </div>
                     </form>
                 </div>

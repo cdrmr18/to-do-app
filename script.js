@@ -1,9 +1,5 @@
-// task and details values are retireved after pressing enter for submit
-// const onEnter = (e) => {
-//     if (e.key === "Enter") {
-//         createTask();
-//     }
-// }
+// selectors
+const toDoButton = document.getElementById('to-do-button');
 
 const deleteTask = (e) => {
     e.target.parentElement.remove();
@@ -18,30 +14,31 @@ const markComplete = (e) => {
     }
 }
 
-const createTask = () => {
+const createTask = (e) => {
+    e.preventDefault();
     let task = document.getElementById('user-input-title').value;
     let details = document.getElementById('user-input-details').value;
+    
     let toDoList = document.querySelector('.to-do-list-items');
     let taskItem = `
-        <div class="individual-task-container">
-                <div class="todo-item-container">
-                    <div class="check" onclick="markComplete(event)"></div>
-                    <!-- <div class="tasks-container"> -->
-                    <div class="task-full-info">
-                        <div class="task-details">
-                            <div class="todo-item">
-                                ${task[0].toUpperCase() + task.slice(1)}
+        <div class="individual-task-container mt-1">
+                    <div class="todo-item-container">
+                        <div class="check" onclick="markComplete(event)"></div>
+                        <div class="task-full-info">
+                            <div class="task-details">
+                                <div class="todo-item">
+                                   ${task[0].toUpperCase() + task.slice(1)}
+                                </div>
+                            </div>
+                            <div class="task-description">
+                              ${(details) ? details[0].toUpperCase() + details.slice(1) : ""}
                             </div>
                         </div>
-                        <div class="task-description">
-                            ${details[0].toUpperCase() + details.slice(1)}
-                        </div>
+                    </div>
+                    <div class="delete-item" onclick="deleteTask(event)">
+                        <button class="btn delete-button-bg">🗑️</button>
                     </div>
                 </div>
-                <div class="delete-item" onclick="deleteTask(event)">
-                    X
-                </div>
-            </div>
     `;
    
     toDoList.insertAdjacentHTML('afterbegin', taskItem);
