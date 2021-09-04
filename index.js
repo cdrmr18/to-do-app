@@ -1,46 +1,57 @@
-
+// CREATING DRAGGABLE DIVS
 const draggableInProgress = document.querySelector(".to-do-list-items");
 const draggableCompleted = document.getElementById("complete-tasks");
 
+    // in progress tasks
 new Sortable(draggableInProgress, {
     group: 'shared', // set both lists to same group
     animation: 150,
     ghostClass: 'blue-background-class'
 });
 
+    // completed tasks
 new Sortable(draggableCompleted, {
     group: 'shared',
     animation: 150,
     ghostClass: 'blue-background-class'
 });
+// END
 
+
+// HELPER FUNCTIONS
+    // searches through to do items for a match to search input value
 const searchTodoList = (e) => {
-    const searchInput = document.getElementById('search-input');
-    const filter = searchInput.value.toUpperCase();
-    const todoItem = document.querySelectorAll('.todo-item');
-    
+    let searchInput = document.getElementById('search-input');
+    let filter = searchInput.value.toUpperCase();
+    let todoItem = document.querySelectorAll('.todo-item');
 
+    // looping through to do items for a match to filter value
     for (const item of todoItem) {
-        let txtValue = item.textContent || item.innerText;
-        if (txtValue.toUpperCase().indexOf(filter) > -1) {
+        let titleValue = item.textContent || item.innerText;
+
+        if (titleValue.toUpperCase().indexOf(filter) > -1 ) {
             item.parentNode.parentNode.style.display = '';
+            console.log(1)
         } else {
             item.parentNode.parentNode.style.display = 'none';
         }
-    }
+    } 
 }
+
 
 const deleteTask = (e) => {
     let todoTask = e.target.parentElement.parentElement;
     todoTask.remove();
 }
 
+// FUNCTION TO CREATE NEW DIV WITH NEW TASK ITEM
 const createTask = (e) => {
     e.preventDefault();
+    let toDoList = document.querySelector('.to-do-list-items');
     let task = document.getElementById('user-input-title').value;
     let details = document.getElementById('user-input-details').value;
     
-    let toDoList = document.querySelector('.to-do-list-items');
+    // creates new task div if title is not empty
     if (task != "") {
         let newTaskItem = `
         <div class="individual-task-container mt-2">
@@ -64,10 +75,8 @@ const createTask = (e) => {
         `;
     
         toDoList.insertAdjacentHTML('beforebegin', newTaskItem);
-    } else {
-        document.getElementById('user-input-title').style.border = "2px solid #00c8ffcc";
-        document.getElementById('user-input-title').placeholder = "Please enter a task";
     }
+
     document.getElementById('user-input-title').value = "";
     document.getElementById('user-input-details').value = "";
     

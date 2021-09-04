@@ -23,24 +23,8 @@ form {
   align-items: center;
 }
 
-span {
-  margin-left: 8px;
-}
 /* class & id styles */
-.add-new-task-container,
-.individual-task-container {
-  display: flex;
-  align-items: center;
-  height: 88px;
-  box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
-  background-color: white;
-  border-radius: 4px;
-  color: gray;
-}
 
-#complete-tasks {
-  opacity: 0.7;
-}
 .container {
   max-width: 90%;
   border-radius: 4px;
@@ -56,75 +40,10 @@ span {
   color: gray;
 }
 
-.search {
-  display: flex;
-  align-items: center;
-  flex-direction: column;
-}
-.search-container {
-  display: flex;
-  justify-content: center;
-  background: white;
-  width: 80%;
-  border-radius: 4px;
-  height: 40px;
-}
 .hero-container {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-}
-#search-input {
-  border: none;
-  outline: none;
-}
-.task-description {
-  color: gray;
-  text-transform: capitalize;
-}
-
-.task-details {
-  flex-grow: 1;
-}
-
-.todo-item {
-  display: flex;
-  align-items: center;
-  text-transform: capitalize;
-}
-.to-do-list-items,
-#complete-tasks {
-  border-radius: 4px;
-  overflow: hidden;
-}
-.todo-item-container {
-  height: 64px;
-}
-.todo-item-container,
-.input-todo-container {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  background-color: white;
-  padding: 0px 16px;
-  margin-left: 8px;
-  width: 100%;
-}
-
-.to-do-list-items,
-.new-task-item,
-#complete-tasks {
-  width: 100%;
-  color: gray;
-  border-radius: 4px;
-}
-
-#user-input-title,
-#user-input-details {
-  flex: 1;
-  background-color: transparent;
-  border: none;
-  color: black;
-  outline: none;
+  margin-bottom: 48px;
 }

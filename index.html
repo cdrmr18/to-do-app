@@ -5,17 +5,21 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="search.css">
+    <link rel="stylesheet" href="todo.css">
+    <link rel="stylesheet" href="todo.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
     <script src="https://kit.fontawesome.com/3e929ff82b.js" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Sortable/1.14.0/Sortable.min.js"
         integrity="sha512-zYXldzJsDrNKV+odAwFYiDXV2Cy37cwizT+NkuiPGsa9X1dOz04eHvUWVuxaJ299GvcJT31ug2zO4itXBjFx4w=="
         crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-    <title>To Do App</title>
+    <title>My To Do App</title>
 </head>
 <body>
-    <div class="container py-4">
-        <div class="hero-container mb-4">
+    <div class="container py-4 my-4">
+        <!-- HERO CONTENT WITH SEARCH BAR -->
+        <div class="hero-container">
             <div class="hero-header">
                 <h1 class="text-center">My ToDo List</h1>
             </div>
@@ -23,34 +27,34 @@
                 <input id="search-input" type="search" placeholder="Search tasks" onkeyup="searchTodoList(event)">
             </div>
         </div>
-        <!-- add new task to the to do list -->
-        <div class="add-task-main-container">
-                <div class="add-new-task-container">
-                    <form name="addTaskForm" required>
-                        <div class="input-todo-container">
-                            <div class="task-input-container">
-                                <div class="task-details">
-                                    <i class="far fa-check-circle"></i>
-                                    <input id="user-input-title" name="ftitle" type="text" placeholder="Write a task name" >
-                                </div>
-                                <div class="task-description">
-                                    <i class="far fa-edit"></i>
-                                    <input id="user-input-details" class="mt-2" type="text" maxlength="20" placeholder="Enter task details" >
-                                </div>
-                            </div>
-                        </div>
-                        <div>
-                            <button id="to-do-button" class="btn add-button-bg" type="submit" onclick="createTask(event)">
-                                <i class="fas fa-plus"></i>
-                            </button>
-                        </div>
-                    </form>
-                </div>
-        </div>
+        <!-- END -->
 
-        <!-- to do list conatainer -->
-        <div class="to-dos-container mt-2">  
-            <h2>In Progess</h2>
+        <!-- ADD NEW TASK: add new task to the to do list -->
+        <div class="add-new-task-container">
+            <form name="addTaskForm" required>
+                <div class="input-todo-container">
+                    <div class="task-input-container">
+                        <div class="task-details">
+                            <i class="far fa-check-circle"></i>
+                            <input id="user-input-title" name="ftitle" type="text" placeholder="Write a task name" >
+                        </div>
+                        <div class="input-task-description">
+                            <i class="far fa-edit"></i>
+                            <input id="user-input-details" class="mt-2" type="text" maxlength="20" placeholder="Enter task details" >
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <button id="to-do-button" class="btn add-button-bg" type="submit" onclick="createTask(event)">
+                        <i class="fas fa-plus"></i>
+                    </button>
+                </div>
+            </form>
+        </div>
+        <!-- END -->
+
+        <!-- IN PROGRESS TO TASKS: to do list conatainer -->
+            <h2 class="mt-4">In Progess</h2>
             <div class="to-do-list-items">
                 <!-- each to do task is listed here-->
                 <div class="individual-task-container mt-2">
@@ -71,9 +75,9 @@
                     </div>
                 </div>            
             </div>
+            <!-- END -->
             
-            
-            <!-- COMPLETED to do list conatainer -->
+            <!-- COMPLETED TODO TASKS: to do list conatainer -->
             <h2 class="mt-4">Completed</h2>
             <div id="complete-tasks">
                 <!-- each completed to do task is listed here-->
@@ -94,11 +98,10 @@
                         <i class="fas fa-bars"></i>
                     </div>
                 </div>
-
             </div>
-        </div>
+            <!-- END -->
     </div>
 
-<script src="script.js"></script>
+<script src="index.js"></script>
 </body>
 </html>
