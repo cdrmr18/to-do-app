@@ -14,22 +14,28 @@ form {
   justify-content: space-between;
   box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
 }
+
 .add-new-task-container,
 .individual-task-container {
-  /* border-bottom: 1px solid gray; */
   display: flex;
   align-items: center;
   height: 88px;
 }
+
 .check {
   height: 20px;
   width: 20px;
   border-radius: 50%;
-  border: 1px solid #00c9ff;
+  border: 2px solid #00c8ffcc;
   margin-right: 24px;
 }
+
 .complete {
   background: linear-gradient(120deg, #00c9ff, #92fe9d);
+}
+
+#complete-tasks {
+  opacity: 0.7;
 }
 
 .container {
@@ -37,6 +43,7 @@ form {
   margin-top: 100px;
   border-radius: 4px;
 }
+
 .delete-item {
   padding-right: 23px;
 }
@@ -58,6 +65,7 @@ form {
 #complete-tasks {
   border-radius: 4px;
   overflow: hidden;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
 }
 .todo-item-container {
   height: 56px;

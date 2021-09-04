@@ -42,18 +42,18 @@
                             </div>
                         </div>
                         <div>
-                            <button class="btn btn-success" type="submit">X</button>
+                            <button class="btn add-button-bg" type="submit">➕</button>
                         </div>
                     </form>
                 </div>
             </div>
         </div>
 
-        <div class="to-dos-container">
+        <div class="to-dos-container mt-3">
             <!-- to do list conatainer -->
-            <div class="to-do-list-items mt-3 mb-4">
+            <div class="to-do-list-items">
                 <!-- each to do task is listed here-->
-                <div class="individual-task-container">
+                <div class="individual-task-container mt-1">
                     <div class="todo-item-container">
                         <div class="check" onclick="markComplete(event)"></div>
                         <div class="task-full-info">
@@ -68,17 +68,35 @@
                         </div>
                     </div>
                     <div class="delete-item" onclick="deleteTask(event)">
-                        <button class="btn btn-primary">X</button>
+                        <button class="btn delete-button-bg">🗑️</button>
+                    </div>
+                </div>
+                <div class="individual-task-container mt-1">
+                    <div class="todo-item-container">
+                        <div class="check" onclick="markComplete(event)"></div>
+                        <div class="task-full-info">
+                            <div class="task-details">
+                                <div class="todo-item">
+                                   run
+                                </div>
+                            </div>
+                            <div class="task-description">
+                                lake
+                            </div>
+                        </div>
+                    </div>
+                    <div class="delete-item" onclick="deleteTask(event)">
+                        <button class="btn delete-button-bg">🗑️</button>
                     </div>
                 </div>
             </div>
-    
+            
             <!-- completed to do list conatainer -->
-            <h2 class="text-center">COMPLETE</h2>
+            <h2 class="text-center mt-4">COMPLETE</h2>
             <div id="complete-tasks">
                 <!-- each completed to do task is listed here-->
                 <div class="individual-task-container">
-                    <div class="todo-item-container">
+                    <div class="todo-item-container mt-1">
                         <div class="check" onclick="markComplete(event)"></div>
                         <div class="task-full-info">
                             <div class="task-details">
@@ -92,7 +110,7 @@
                         </div>
                     </div>
                     <div class="delete-item" onclick="deleteTask(event)">
-                        <button class="btn btn-primary" >X</button>
+                        <button class="btn delete-button-bg " >🗑️</button>
                     </div>
                 </div>
             </div>
