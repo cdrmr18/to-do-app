@@ -2,14 +2,16 @@
 body {
   background: #181824 !important;
 }
-
+form {
+  display: flex;
+}
 /* class styles */
 .check {
   height: 20px;
   width: 20px;
   border-radius: 50%;
   border: 1px solid yellow;
-  margin-right: 16px;
+  margin-right: 24px;
 }
 .complete {
   background-color: green;
@@ -35,6 +37,7 @@ body {
 .input-todo,
 .individual-task-container {
   height: 88px;
+  justify-content: space-evenly;
 }
 .input-todo input {
   flex: 1;
@@ -62,9 +65,11 @@ body {
 .todo-item {
   display: flex;
   align-items: center;
+  font-size: 24px;
 }
 .to-do-list-items,
-.input-todo {
+.input-todo,
+#complete-tasks {
   border-radius: 4px;
   overflow: hidden;
 }
@@ -80,7 +85,8 @@ body {
   width: 100%;
 }
 
-.to-do-list-items {
+.to-do-list-items,
+#complete-tasks {
   background-color: #25283c;
   width: 100%;
   color: white;
@@ -89,6 +95,5 @@ body {
 
 .user-input {
   display: flex;
-  /* flex-direction: column; */
   flex-grow: 1;
 }

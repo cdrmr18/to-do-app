@@ -20,27 +20,105 @@
     <title>To Do App</title>
 </head>
 <body>
-    <div class="container py-4">     
-        <h1 class="text-center">TODO</h1>
+    <div class="container py-4"> 
+        <header>
+            <h1 class="text-center">TODO</h1>
+        </header>    
+        
 
         <!-- add new task to the to do list -->
-        <div class="input-todo mt-4"> 
-            <div class="check"></div>
-            <div class="ask-full-info">
-                <div class="task-details">
-                    <input id="user-input-title" type="text" placeholder="Add a new task" onkeyup="onEnter(event)">
-                </div>  
-                <div class="task-description">
-                    <input id="user-input-details" class="mt-2" type="text" placeholder="Enter task details" onkeyup="onEnter(event)">
+        <div class="to-dos-container">
+            <!-- to do list conatainer -->
+            <div class="to-do-list-items mt-3 mb-4">
+                <div class="individual-task-container">
+                    <div class="todo-item-container">
+                        <div class="check" onclick="markComplete(event)"></div>
+                        <!-- <div class="tasks-container"> -->
+                        <div class="task-full-info">
+                            <div class="task-details">
+                                <div class="todo-item">
+                                    walk
+                                </div>
+                            </div>
+                            <div class="task-description">
+                                park
+                            </div>
+                        </div>
+                    </div>
+                    <div class="delete-item" onclick="deleteTask(event)">
+                        <button class="btn btn-success" type="submit">+</button>
+                    </div>
                 </div>
             </div>
         </div>
+        <!-- <div class="input-todo mt-4"> 
+            <div class="check"></div>
+            <form action="" onsubmit="createTask()">
+                <div class="ask-full-info">
+                    <div class="task-details">
+                        <input id="user-input-title" type="text" placeholder="Add a new task" onkeyup="onEnter(event)">
+                    </div>
+                    <div class="task-description">
+                        <input id="user-input-details" class="mt-2" type="text" placeholder="Enter task details"
+                            onkeyup="onEnter(event)">
+                    </div>
+                </div>
+                <button class="btn btn-success" type="submit">+</button>
+            </form>
+        </div> -->
 
-        <!-- to do list conatainer -->
-        <div class="to-do-list-items mt-3">
-            <!-- each to do task is listed here-->
+        <div class="to-dos-container">
+            <!-- to do list conatainer -->
+            <div class="to-do-list-items mt-3 mb-4">
+                <!-- each to do task is listed here-->
+                <div class="individual-task-container">
+                    <div class="todo-item-container">
+                        <div class="check" onclick="markComplete(event)"></div>
+                        <!-- <div class="tasks-container"> -->
+                        <div class="task-full-info">
+                            <div class="task-details">
+                                <div class="todo-item">
+                                   swim
+                                </div>
+                            </div>
+                            <div class="task-description">
+                                lake
+                            </div>
+                        </div>
+                    </div>
+                    <div class="delete-item" onclick="deleteTask(event)">
+                        <button class="btn btn-primary">X</button>
+                    </div>
+                </div>
+            </div>
+    
+            <!-- completed to do list conatainer -->
+            <h2 class="text-center">COMPLETE</h2>
+            <div id="complete-tasks">
+                <!-- each completed to do task is listed here-->
+                <div class="individual-task-container">
+                    <div class="todo-item-container">
+                        <div class="check" onclick="markComplete(event)"></div>
+                        <!-- <div class="tasks-container"> -->
+                        <div class="task-full-info">
+                            <div class="task-details">
+                                <div class="todo-item">
+                                   walk
+                                </div>
+                            </div>
+                            <div class="task-description">
+                                park
+                            </div>
+                        </div>
+                    </div>
+                    <div class="delete-item" onclick="deleteTask(event)">
+                        <button class="btn btn-primary" >X</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
     </div>
-
     <p class="text-center mt-4">Drag and drop to reorder list</p>
 
 <script src="script.js"></script>

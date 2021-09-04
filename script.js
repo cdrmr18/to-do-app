@@ -1,20 +1,20 @@
-
-const onEnter = (e) => {
-    if (e.key === "Enter") {
-        createTask();
-    }
-}
+// task and details values are retireved after pressing enter for submit
+// const onEnter = (e) => {
+//     if (e.key === "Enter") {
+//         createTask();
+//     }
+// }
 
 const deleteTask = (e) => {
     e.target.parentElement.remove();
 }
 
 const markComplete = (e) => {
+    let completeTask = document.getElementById('complete-tasks');
     if (e.target.classList.contains('complete')) {
         e.target.classList.remove("complete");
     } else {
-        // e.target.style.backgroundColor = "green";
-        e.target.className += ' complete'
+        e.target.className += ' complete';
     }
 }
 
