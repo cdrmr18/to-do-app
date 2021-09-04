@@ -25,7 +25,7 @@ form {
 .individual-task-container {
   display: flex;
   align-items: center;
-  height: 88px;
+  height: 72px;
 }
 
 .check {
@@ -40,10 +40,6 @@ form {
   background: linear-gradient(120deg, #00c9ff, #92fe9d);
 }
 
-#complete-tasks {
-  opacity: 0.7;
-}
-
 .container {
   max-width: 80%;
   border-radius: 4px;
@@ -56,6 +52,7 @@ form {
 
 .task-description {
   color: gray;
+  text-transform: capitalize;
 }
 
 .task-details {
@@ -65,6 +62,7 @@ form {
 .todo-item {
   display: flex;
   align-items: center;
+  text-transform: capitalize;
 }
 .to-do-list-items,
 #complete-tasks {

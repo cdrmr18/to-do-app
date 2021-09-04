@@ -1,12 +1,3 @@
-<!-- TODO: -->
-<!-- - edit a todo -->
-<!-- make a todo as completed - draggable in a new column -->
-<!-- 
-- Mark todos as complete
-- Filter by all/active/complete todos
-- Clear all completed todos
- -->
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -61,11 +52,11 @@
                         <div class="check" onclick="markComplete(event)"></div>
                         <div class="task-full-info">
                             <div class="task-details">
-                                <div class="todo-item">
+                                <div class="todo-item" contenteditable="true">
                                    swim
                                 </div>
                             </div>
-                            <div class="task-description">
+                            <div class="task-description" contenteditable="true">
                                 lake
                             </div>
                         </div>
@@ -84,15 +75,15 @@
             <div id="complete-tasks">
                 <!-- each completed to do task is listed here-->
                 <div class="individual-task-container">
-                    <div class="todo-item-container mt-1">
+                    <div class="todo-item-container">
                         <div class="check" onclick="markComplete(event)"></div>
                         <div class="task-full-info">
                             <div class="task-details">
-                                <div class="todo-item">
+                                <div class="todo-item" contenteditable="true">
                                    walk
                                 </div>
                             </div>
-                            <div class="task-description">
+                            <div class="task-description" contenteditable="true">
                                 park
                             </div>
                         </div>

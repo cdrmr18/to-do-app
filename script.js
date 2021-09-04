@@ -4,12 +4,14 @@ const draggableCompleted = document.getElementById("complete-tasks");
 
 new Sortable(draggableInProgress, {
     group: 'shared', // set both lists to same group
-    animation: 150
+    animation: 150,
+    ghostClass: 'blue-background-class'
 });
 
 new Sortable(draggableCompleted, {
     group: 'shared',
-    animation: 150
+    animation: 150,
+    ghostClass: 'blue-background-class'
 });
 // selectors
 const toDoButton = document.getElementById('to-do-button');
