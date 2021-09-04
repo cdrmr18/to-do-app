@@ -17,14 +17,16 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
     <script src="https://kit.fontawesome.com/3e929ff82b.js" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Sortable/1.14.0/Sortable.min.js"
+        integrity="sha512-zYXldzJsDrNKV+odAwFYiDXV2Cy37cwizT+NkuiPGsa9X1dOz04eHvUWVuxaJ299GvcJT31ug2zO4itXBjFx4w=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <title>To Do App</title>
 </head>
 <body>
     <div class="container py-4"> 
         <header>
-            <h1 class="text-center">TODO</h1>
+            <h2 class="text-center">New Task</h2>
         </header>    
-        
         <!-- add new task to the to do list -->
         <div class="add-task-main-container">
             <div class="new-task-item mt-3 mb-4">
@@ -49,8 +51,9 @@
             </div>
         </div>
 
-        <div class="to-dos-container mt-3">
-            <!-- to do list conatainer -->
+        <!-- to do list conatainer -->
+        <div class="to-dos-container mt-3">  
+            <h2 class="text-center">In Progess</h2>
             <div class="to-do-list-items">
                 <!-- each to do task is listed here-->
                 <div class="individual-task-container mt-1">
@@ -74,31 +77,10 @@
                         <i class="fas fa-bars"></i>
                     </div>
                 </div>
-                <div class="individual-task-container mt-1">
-                    <div class="todo-item-container">
-                        <div class="check" onclick="markComplete(event)"></div>
-                        <div class="task-full-info">
-                            <div class="task-details">
-                                <div class="todo-item">
-                                   run
-                                </div>
-                            </div>
-                            <div class="task-description">
-                                lake
-                            </div>
-                        </div>
-                    </div>
-                    <div onclick="deleteTask(event)">
-                        <button class="btn delete-button-bg">🗑️</button>
-                    </div>
-                    <div class="drag-icon">
-                        <i class="fas fa-bars"></i>
-                    </div>
-                </div>
             </div>
             
-            <!-- completed to do list conatainer -->
-            <h2 class="text-center mt-4">COMPLETE</h2>
+            <!-- COMPLETED to do list conatainer -->
+            <h2 class="text-center mt-4">Completed</h2>
             <div id="complete-tasks">
                 <!-- each completed to do task is listed here-->
                 <div class="individual-task-container">

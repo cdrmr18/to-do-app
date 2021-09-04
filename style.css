@@ -1,8 +1,14 @@
 /* main styles */
 body {
-  /* background: #181824 !important; */
-  background-repeat: no-repeat;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
   background: linear-gradient(120deg, #ee9ca7, #ffdde1) !important;
+}
+h1,
+h2 {
+  color: white;
 }
 form {
   display: flex;
@@ -40,12 +46,12 @@ form {
 
 .container {
   max-width: 80%;
-  margin-top: 32px;
   border-radius: 4px;
 }
 
 .drag-icon {
   padding: 0 16px 0 12px;
+  cursor: pointer;
 }
 
 .task-description {
