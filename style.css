@@ -1,11 +1,13 @@
 /* main styles */
 body {
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
   min-height: 100vh;
   background: linear-gradient(120deg, #ee9ca7, #ffdde1) !important;
 }
+
 h1,
 h2 {
   color: white;
@@ -13,6 +15,27 @@ h2 {
 form {
   display: flex;
   align-items: center;
+}
+.banner {
+  background-size: cover;
+  background-position: center;
+  padding: 132px 0;
+  width: 100%;
+}
+
+.banner h1 {
+  margin: 0;
+  color: white;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2);
+  font-size: 32px;
+  font-weight: bold;
+}
+
+.banner p {
+  font-size: 20px;
+  color: white;
+  opacity: 0.7;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2);
 }
 
 /* class & id styles */
@@ -43,6 +66,8 @@ form {
 .container {
   max-width: 80%;
   border-radius: 4px;
+  position: relative;
+  bottom: 86px;
 }
 
 .drag-icon {

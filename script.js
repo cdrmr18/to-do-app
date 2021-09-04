@@ -25,12 +25,20 @@ const markComplete = (e) => {
     if (e.target.classList.contains('check')) {
         e.target.classList.toggle('complete');
     }
+
+    if (e.target.classList.contains('complete')) {
+        // moveToCompleteDiv(e);
+    } else {
+        console.log('not done')
+    }
 }
 
-const moveToCompleteDiv = (e) =>{
-    let completeTask = document.getElementById('complete-tasks');
-    console.log(e.target);
-}
+// const moveToCompleteDiv = (e) =>{
+//     let completeTaskDiv = document.getElementById('complete-tasks');
+//     let completedTask = e.target.parentElement.parentElement;
+//     // console.log(e.target.parentElement.parentElement);
+//      completeTaskDiv.insertAdjacentHTML('beforeend', newTaskItem);
+// }
 
 const createTask = (e) => {
     e.preventDefault();

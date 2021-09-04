@@ -14,11 +14,15 @@
     <title>To Do App</title>
 </head>
 <body>
-    <div class="container py-4"> 
-        <header>
-            <h2 class="text-center">New Task</h2>
-        </header>    
+    <div class="banner"
+        style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(https://images.unsplash.com/photo-1471970394675-613138e45da3?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1400&q=80);">
+        <div class="banner-container">
+            <h1 class="text-center">My ToDo List</h1>
+        </div>
+    </div>
+    <div class="container py-4">
         <!-- add new task to the to do list -->
+        <h2 class="text-center">New Task</h2>
         <div class="add-task-main-container">
             <div class="new-task-item mt-3 mb-4">
                 <div class="add-new-task-container">
@@ -76,7 +80,7 @@
                 <!-- each completed to do task is listed here-->
                 <div class="individual-task-container">
                     <div class="todo-item-container">
-                        <div class="check" onclick="markComplete(event)"></div>
+                        <div class="check" onclick="markComplete(e)"></div>
                         <div class="task-full-info">
                             <div class="task-details">
                                 <div class="todo-item" contenteditable="true">
