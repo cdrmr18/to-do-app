@@ -43,14 +43,15 @@ const createTask = (e) => {
     let toDoList = document.querySelector('.to-do-list-items');
     if (task != "") {
         let newTaskItem = `
-        <div class="individual-task-container mt-1">
+        <div class="individual-task-container mt-2">
             <div class="todo-item-container">
                 <div class="todo-item" contenteditable="true">
-                    ${task[0].toUpperCase() + task.slice(1)}
+                 <p class="mt-0"><i class="fas fa-walking"></i> <span>${task[0].toUpperCase() + task.slice(1)}</span></p>
                 </div>
 
                 <div class="task-description" contenteditable="true">
-                    ${(details) ? details[0].toUpperCase() + details.slice(1) : ""}
+                <p class="mb-0"><i class="far fa-edit"></i> <span>${(details) ? details[0].toUpperCase() + details.slice(1) : ""}</span></p>
+   
                 </div>
             </div>
             <div onclick="deleteTask(event)">
@@ -62,7 +63,7 @@ const createTask = (e) => {
         </div>        
         `;
     
-        toDoList.insertAdjacentHTML('beforeend', newTaskItem);
+        toDoList.insertAdjacentHTML('beforebegin', newTaskItem);
     } else {
         document.getElementById('user-input-title').style.border = "2px solid #00c8ffcc";
         document.getElementById('user-input-title').placeholder = "Please enter a task";
@@ -71,5 +72,3 @@ const createTask = (e) => {
     document.getElementById('user-input-details').value = "";
     
 }
-// ${task[0].toUpperCase() + task.slice(1)}
-//  ${(details) ? details[0].toUpperCase() + details.slice(1) : ""}

@@ -1,40 +1,50 @@
 /* main styles */
 body {
+  padding-top: 24px;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  min-height: 100vh;
-  background: linear-gradient(120deg, #ee9ca7, #ffdde1) !important;
 }
-
+html,
+body {
+  background: linear-gradient(120deg, #ee9ca7, #ffdde1) !important;
+  background-attachment: fixed;
+  background-size: cover;
+  height: auto;
+  color: gray;
+}
 h1,
 h2 {
-  color: black;
+  color: gray;
 }
 form {
   display: flex;
   align-items: center;
 }
 
-/* class & id styles */
-.add-new-task-container {
-  box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+span {
+  margin-left: 8px;
 }
-
+/* class & id styles */
 .add-new-task-container,
 .individual-task-container {
   display: flex;
   align-items: center;
   height: 88px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+  background-color: white;
+  border-radius: 4px;
+  color: gray;
 }
 
 #complete-tasks {
   opacity: 0.7;
 }
 .container {
-  max-width: 80%;
+  max-width: 90%;
   border-radius: 4px;
+  height: 100vh;
 }
 
 .drag-icon {
@@ -56,12 +66,18 @@ form {
   justify-content: center;
   background: white;
   width: 80%;
+  border-radius: 4px;
+  height: 40px;
 }
 .hero-container {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
+}
+#search-input {
+  border: none;
+  outline: none;
 }
 .task-description {
   color: gray;
@@ -81,7 +97,6 @@ form {
 #complete-tasks {
   border-radius: 4px;
   overflow: hidden;
-  box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
 }
 .todo-item-container {
   height: 64px;
@@ -93,14 +108,13 @@ form {
   justify-content: center;
   background-color: white;
   padding: 0px 16px;
-  margin-left: 32px;
+  margin-left: 8px;
   width: 100%;
 }
 
 .to-do-list-items,
 .new-task-item,
 #complete-tasks {
-  background-color: white;
   width: 100%;
   color: gray;
   border-radius: 4px;

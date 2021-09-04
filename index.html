@@ -25,16 +25,17 @@
         </div>
         <!-- add new task to the to do list -->
         <div class="add-task-main-container">
-            <div class="new-task-item mt-3 mb-4">
                 <div class="add-new-task-container">
                     <form name="addTaskForm" required>
                         <div class="input-todo-container">
                             <div class="task-input-container">
                                 <div class="task-details">
-                                    <input id="user-input-title" name="ftitle" type="text" placeholder="Add a new task" >
+                                    <i class="far fa-check-circle"></i>
+                                    <input id="user-input-title" name="ftitle" type="text" placeholder="Write a task name" >
                                 </div>
                                 <div class="task-description">
-                                    <input id="user-input-details" class="mt-2" type="text" placeholder="Enter task details" >
+                                    <i class="far fa-edit"></i>
+                                    <input id="user-input-details" class="mt-2" type="text" maxlength="20" placeholder="Enter task details" >
                                 </div>
                             </div>
                         </div>
@@ -45,22 +46,21 @@
                         </div>
                     </form>
                 </div>
-            </div>
         </div>
 
         <!-- to do list conatainer -->
-        <div class="to-dos-container mt-3">  
+        <div class="to-dos-container mt-2">  
             <h2>In Progess</h2>
             <div class="to-do-list-items">
                 <!-- each to do task is listed here-->
-                <div class="individual-task-container mt-1">
+                <div class="individual-task-container mt-2">
                     <div class="todo-item-container">
                         <div class="todo-item" contenteditable="true">
-                            swim
+                            <p class="mt-0"><i class="fas fa-walking"></i> <span>swim</span></p>
                         </div>
-
+                        
                         <div class="task-description" contenteditable="true">
-                            lake
+                            <p class="mb-0"><i class="far fa-edit"></i> <span>lake</span></p>
                         </div>
                     </div>
                     <div onclick="deleteTask(event)">
@@ -77,14 +77,14 @@
             <h2 class="mt-4">Completed</h2>
             <div id="complete-tasks">
                 <!-- each completed to do task is listed here-->
-                <div class="individual-task-container mt-1">
+                <div class="individual-task-container mt-2">
                     <div class="todo-item-container">
                         <div class="todo-item" contenteditable="true">
-                            swim
+                            <p class="mt-0"><i class="fas fa-walking"></i> <span>swim</span></p>    
                         </div>
                 
-                        <div class="task-description" contenteditable="true">
-                            lake
+                        <div class="task-description" contenteditable="true">  
+                            <p class="mb-0"><i class="far fa-edit"></i> <span>lake</span></p>
                         </div>
                     </div>
                     <div onclick="deleteTask(event)">
