@@ -2,16 +2,19 @@
 const toDoButton = document.getElementById('to-do-button');
 
 const deleteTask = (e) => {
-    e.target.parentElement.remove();
+    let todoTask = e.target.parentElement.parentElement;
+    todoTask.remove();
 }
 
 const markComplete = (e) => {
-    let completeTask = document.getElementById('complete-tasks');
-    if (e.target.classList.contains('complete')) {
-        e.target.classList.remove("complete");
-    } else {
-        e.target.className += ' complete';
+    if (e.target.classList.contains('check')) {
+        e.target.classList.toggle('complete');
     }
+}
+
+const moveToCompleteDiv = (e) =>{
+    let completeTask = document.getElementById('complete-tasks');
+    console.log(e.target);
 }
 
 const createTask = (e) => {
@@ -20,7 +23,7 @@ const createTask = (e) => {
     let details = document.getElementById('user-input-details').value;
     
     let toDoList = document.querySelector('.to-do-list-items');
-    let taskItem = `
+    let newTaskItem = `
         <div class="individual-task-container mt-1">
                     <div class="todo-item-container">
                         <div class="check" onclick="markComplete(event)"></div>
@@ -41,7 +44,7 @@ const createTask = (e) => {
                 </div>
     `;
    
-    toDoList.insertAdjacentHTML('afterbegin', taskItem);
+    toDoList.insertAdjacentHTML('beforeend', newTaskItem);
     document.getElementById('user-input-title').value = "";
     document.getElementById('user-input-details').value = "";
 }

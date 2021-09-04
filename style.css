@@ -44,8 +44,8 @@ form {
   border-radius: 4px;
 }
 
-.delete-item {
-  padding-right: 23px;
+.drag-icon {
+  padding: 0 16px 0 12px;
 }
 
 .task-description {
@@ -59,7 +59,6 @@ form {
 .todo-item {
   display: flex;
   align-items: center;
-  font-size: 24px;
 }
 .to-do-list-items,
 #complete-tasks {

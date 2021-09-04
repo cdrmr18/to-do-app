@@ -1,7 +1,6 @@
 <!-- TODO: -->
 <!-- - edit a todo -->
 <!-- make a todo as completed - draggable in a new column -->
-<!-- the app should be designed in a simple, clean, and modern way. -->
 <!-- 
 - Mark todos as complete
 - Filter by all/active/complete todos
@@ -17,6 +16,7 @@
     <link rel="stylesheet" href="style.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
+    <script src="https://kit.fontawesome.com/3e929ff82b.js" crossorigin="anonymous"></script>
     <title>To Do App</title>
 </head>
 <body>
@@ -67,8 +67,11 @@
                             </div>
                         </div>
                     </div>
-                    <div class="delete-item" onclick="deleteTask(event)">
+                    <div onclick="deleteTask(event)">
                         <button class="btn delete-button-bg">🗑️</button>
+                    </div>
+                    <div class="drag-icon">
+                        <i class="fas fa-bars"></i>
                     </div>
                 </div>
                 <div class="individual-task-container mt-1">
@@ -85,8 +88,11 @@
                             </div>
                         </div>
                     </div>
-                    <div class="delete-item" onclick="deleteTask(event)">
+                    <div onclick="deleteTask(event)">
                         <button class="btn delete-button-bg">🗑️</button>
+                    </div>
+                    <div class="drag-icon">
+                        <i class="fas fa-bars"></i>
                     </div>
                 </div>
             </div>
@@ -109,15 +115,16 @@
                             </div>
                         </div>
                     </div>
-                    <div class="delete-item" onclick="deleteTask(event)">
-                        <button class="btn delete-button-bg " >🗑️</button>
+                    <div onclick="deleteTask(event)">
+                        <button class="btn delete-button-bg">🗑️</button>
+                    </div>
+                    <div class="drag-icon">
+                        <i class="fas fa-bars"></i>
                     </div>
                 </div>
             </div>
         </div>
-        
     </div>
-    <p class="text-center mt-4">Drag and drop to reorder list</p>
 
 <script src="script.js"></script>
 </body>
