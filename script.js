@@ -13,32 +13,27 @@ new Sortable(draggableCompleted, {
     animation: 150,
     ghostClass: 'blue-background-class'
 });
-// selectors
-const toDoButton = document.getElementById('to-do-button');
+
+const searchTodoList = (e) => {
+    const searchInput = document.getElementById('search-input');
+    const filter = searchInput.value.toUpperCase();
+    const todoItem = document.querySelectorAll('.todo-item');
+    
+
+    for (const item of todoItem) {
+        let txtValue = item.textContent || item.innerText;
+        if (txtValue.toUpperCase().indexOf(filter) > -1) {
+            item.parentNode.parentNode.style.display = '';
+        } else {
+            item.parentNode.parentNode.style.display = 'none';
+        }
+    }
+}
 
 const deleteTask = (e) => {
     let todoTask = e.target.parentElement.parentElement;
     todoTask.remove();
 }
-
-const markComplete = (e) => {
-    if (e.target.classList.contains('check')) {
-        e.target.classList.toggle('complete');
-    }
-
-    if (e.target.classList.contains('complete')) {
-        // moveToCompleteDiv(e);
-    } else {
-        console.log('not done')
-    }
-}
-
-// const moveToCompleteDiv = (e) =>{
-//     let completeTaskDiv = document.getElementById('complete-tasks');
-//     let completedTask = e.target.parentElement.parentElement;
-//     // console.log(e.target.parentElement.parentElement);
-//      completeTaskDiv.insertAdjacentHTML('beforeend', newTaskItem);
-// }
 
 const createTask = (e) => {
     e.preventDefault();
@@ -49,16 +44,12 @@ const createTask = (e) => {
     let newTaskItem = `
         <div class="individual-task-container mt-1">
             <div class="todo-item-container">
-                <div class="check" onclick="markComplete(event)"></div>
-                <div class="task-full-info">
-                    <div class="task-details">
-                        <div class="todo-item">
-                             ${task[0].toUpperCase() + task.slice(1)}
-                        </div>
-                    </div>
-                    <div class="task-description">
-                        ${(details) ? details[0].toUpperCase() + details.slice(1) : ""}
-                    </div>
+                <div class="todo-item" contenteditable="true">
+                    ${task[0].toUpperCase() + task.slice(1)}
+                </div>
+
+                <div class="task-description" contenteditable="true">
+                    ${(details) ? details[0].toUpperCase() + details.slice(1) : ""}
                 </div>
             </div>
             <div onclick="deleteTask(event)">
@@ -67,7 +58,7 @@ const createTask = (e) => {
             <div class="drag-icon">
                 <i class="fas fa-bars"></i>
             </div>
-        </div>
+        </div>        
     `;
    
     toDoList.insertAdjacentHTML('beforeend', newTaskItem);

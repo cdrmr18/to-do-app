@@ -14,24 +14,27 @@
     <title>To Do App</title>
 </head>
 <body>
-    <div class="banner"
-        style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(https://images.unsplash.com/photo-1471970394675-613138e45da3?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1400&q=80);">
-        <div class="banner-container">
+  
+    <div class="search-container mb-4">
+        <div class="hero-header">
             <h1 class="text-center">My ToDo List</h1>
         </div>
+        <div>
+            <input  id="search-input" type="search" placeholder="Search tasks" onkeyup="searchTodoList(event)">
+        </div>
     </div>
+
     <div class="container py-4">
         <!-- add new task to the to do list -->
-        <h2 class="text-center">New Task</h2>
+        <h2>New Task</h2>
         <div class="add-task-main-container">
             <div class="new-task-item mt-3 mb-4">
                 <div class="add-new-task-container">
-                    <form action="">
+                    <form name="addTaskForm" required>
                         <div class="input-todo-container">
-                            <div class="check"></div>
                             <div class="task-input-container">
                                 <div class="task-details">
-                                        <input id="user-input-title" type="text" placeholder="Add a new task" >
+                                    <input id="user-input-title" name="ftitle" type="text" placeholder="Add a new task" >
                                 </div>
                                 <div class="task-description">
                                     <input id="user-input-details" class="mt-2" type="text" placeholder="Enter task details" >
@@ -39,7 +42,9 @@
                             </div>
                         </div>
                         <div>
-                            <button id="to-do-button" class="btn add-button-bg" type="submit" onclick="createTask(event)">➕</button>
+                            <button id="to-do-button" class="btn add-button-bg" type="submit" onclick="createTask(event)">
+                                <i class="fas fa-plus"></i>
+                            </button>
                         </div>
                     </form>
                 </div>
@@ -48,21 +53,17 @@
 
         <!-- to do list conatainer -->
         <div class="to-dos-container mt-3">  
-            <h2 class="text-center">In Progess</h2>
+            <h2>In Progess</h2>
             <div class="to-do-list-items">
                 <!-- each to do task is listed here-->
                 <div class="individual-task-container mt-1">
                     <div class="todo-item-container">
-                        <div class="check" onclick="markComplete(event)"></div>
-                        <div class="task-full-info">
-                            <div class="task-details">
-                                <div class="todo-item" contenteditable="true">
-                                   swim
-                                </div>
-                            </div>
-                            <div class="task-description" contenteditable="true">
-                                lake
-                            </div>
+                        <div class="todo-item" contenteditable="true">
+                            swim
+                        </div>
+
+                        <div class="task-description" contenteditable="true">
+                            lake
                         </div>
                     </div>
                     <div onclick="deleteTask(event)">
@@ -71,25 +72,22 @@
                     <div class="drag-icon">
                         <i class="fas fa-bars"></i>
                     </div>
-                </div>
+                </div>            
             </div>
             
+            
             <!-- COMPLETED to do list conatainer -->
-            <h2 class="text-center mt-4">Completed</h2>
+            <h2 class="mt-4">Completed</h2>
             <div id="complete-tasks">
                 <!-- each completed to do task is listed here-->
-                <div class="individual-task-container">
+                <div class="individual-task-container mt-1">
                     <div class="todo-item-container">
-                        <div class="check" onclick="markComplete(e)"></div>
-                        <div class="task-full-info">
-                            <div class="task-details">
-                                <div class="todo-item" contenteditable="true">
-                                   walk
-                                </div>
-                            </div>
-                            <div class="task-description" contenteditable="true">
-                                park
-                            </div>
+                        <div class="todo-item" contenteditable="true">
+                            swim
+                        </div>
+                
+                        <div class="task-description" contenteditable="true">
+                            lake
                         </div>
                     </div>
                     <div onclick="deleteTask(event)">
@@ -99,6 +97,7 @@
                         <i class="fas fa-bars"></i>
                     </div>
                 </div>
+
             </div>
         </div>
     </div>

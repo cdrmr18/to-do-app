@@ -10,37 +10,15 @@ body {
 
 h1,
 h2 {
-  color: white;
+  color: black;
 }
 form {
   display: flex;
   align-items: center;
 }
-.banner {
-  background-size: cover;
-  background-position: center;
-  padding: 132px 0;
-  width: 100%;
-}
-
-.banner h1 {
-  margin: 0;
-  color: white;
-  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2);
-  font-size: 32px;
-  font-weight: bold;
-}
-
-.banner p {
-  font-size: 20px;
-  color: white;
-  opacity: 0.7;
-  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2);
-}
 
 /* class & id styles */
 .add-new-task-container {
-  justify-content: space-between;
   box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
 }
 
@@ -59,20 +37,28 @@ form {
   margin-right: 24px;
 }
 
-.complete {
-  background: linear-gradient(120deg, #00c9ff, #92fe9d);
+#complete-tasks {
+  opacity: 0.7;
 }
-
 .container {
   max-width: 80%;
   border-radius: 4px;
-  position: relative;
-  bottom: 86px;
+  background-color: rgba(255, 255, 255, 0.548);
 }
 
 .drag-icon {
   padding: 0 16px 0 12px;
   cursor: pointer;
+}
+
+.fa-plus {
+  color: gray;
+}
+
+.search {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
 }
 
 .task-description {
@@ -96,14 +82,16 @@ form {
   box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
 }
 .todo-item-container {
-  height: 56px;
+  height: 64px;
 }
 .todo-item-container,
 .input-todo-container {
   display: flex;
-  align-items: center;
+  flex-direction: column;
+  justify-content: center;
   background-color: white;
   padding: 0px 16px;
+  margin-left: 32px;
   width: 100%;
 }
 
