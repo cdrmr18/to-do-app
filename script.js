@@ -41,7 +41,8 @@ const createTask = (e) => {
     let details = document.getElementById('user-input-details').value;
     
     let toDoList = document.querySelector('.to-do-list-items');
-    let newTaskItem = `
+    if (task != "") {
+        let newTaskItem = `
         <div class="individual-task-container mt-1">
             <div class="todo-item-container">
                 <div class="todo-item" contenteditable="true">
@@ -59,11 +60,16 @@ const createTask = (e) => {
                 <i class="fas fa-bars"></i>
             </div>
         </div>        
-    `;
-   
-    toDoList.insertAdjacentHTML('beforeend', newTaskItem);
+        `;
+    
+        toDoList.insertAdjacentHTML('beforeend', newTaskItem);
+    } else {
+        document.getElementById('user-input-title').style.border = "2px solid #00c8ffcc";
+        document.getElementById('user-input-title').placeholder = "Please enter a task";
+    }
     document.getElementById('user-input-title').value = "";
     document.getElementById('user-input-details').value = "";
+    
 }
 // ${task[0].toUpperCase() + task.slice(1)}
 //  ${(details) ? details[0].toUpperCase() + details.slice(1) : ""}

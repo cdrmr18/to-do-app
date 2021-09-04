@@ -26,15 +26,7 @@ form {
 .individual-task-container {
   display: flex;
   align-items: center;
-  height: 72px;
-}
-
-.check {
-  height: 20px;
-  width: 20px;
-  border-radius: 50%;
-  border: 2px solid #00c8ffcc;
-  margin-right: 24px;
+  height: 88px;
 }
 
 #complete-tasks {
@@ -43,7 +35,6 @@ form {
 .container {
   max-width: 80%;
   border-radius: 4px;
-  background-color: rgba(255, 255, 255, 0.548);
 }
 
 .drag-icon {
@@ -60,7 +51,18 @@ form {
   align-items: center;
   flex-direction: column;
 }
-
+.search-container {
+  display: flex;
+  justify-content: center;
+  background: white;
+  width: 80%;
+}
+.hero-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
 .task-description {
   color: gray;
   text-transform: capitalize;
