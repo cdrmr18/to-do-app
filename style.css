@@ -1,57 +1,44 @@
 /* main styles */
 body {
-  background: #181824 !important;
+  /* background: #181824 !important; */
+  background-repeat: no-repeat;
+  background: linear-gradient(120deg, #ee9ca7, #ffdde1) !important;
 }
 form {
   display: flex;
+  align-items: center;
 }
-/* class styles */
+
+/* class & id styles */
+.add-new-task-container {
+  justify-content: space-between;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+}
+.add-new-task-container,
+.individual-task-container {
+  /* border-bottom: 1px solid gray; */
+  display: flex;
+  align-items: center;
+  height: 88px;
+}
 .check {
   height: 20px;
   width: 20px;
   border-radius: 50%;
-  border: 1px solid yellow;
+  border: 1px solid #00c9ff;
   margin-right: 24px;
 }
 .complete {
-  background-color: green;
+  background: linear-gradient(120deg, #00c9ff, #92fe9d);
 }
 
 .container {
-  background-color: grey;
   max-width: 80%;
   margin-top: 100px;
   border-radius: 4px;
 }
 .delete-item {
-  padding-right: 16px;
-}
-.individual-task-container {
-  border-bottom: 1px solid gray;
-  display: flex;
-  align-items: center;
-}
-.input-details {
-  display: flex;
-}
-.input-todo,
-.individual-task-container {
-  height: 88px;
-  justify-content: space-evenly;
-}
-.input-todo input {
-  flex: 1;
-  background-color: transparent;
-  border: none;
-  color: white;
-}
-
-.input-todo input {
-  outline: none;
-}
-
-.tasks-container {
-  display: flex;
+  padding-right: 23px;
 }
 
 .task-description {
@@ -68,7 +55,6 @@ form {
   font-size: 24px;
 }
 .to-do-list-items,
-.input-todo,
 #complete-tasks {
   border-radius: 4px;
   overflow: hidden;
@@ -77,23 +63,28 @@ form {
   height: 56px;
 }
 .todo-item-container,
-.input-todo {
+.input-todo-container {
   display: flex;
   align-items: center;
-  background-color: #25283c;
+  background-color: white;
   padding: 0px 16px;
   width: 100%;
 }
 
 .to-do-list-items,
+.new-task-item,
 #complete-tasks {
-  background-color: #25283c;
+  background-color: white;
   width: 100%;
-  color: white;
+  color: gray;
   border-radius: 4px;
 }
 
-.user-input {
-  display: flex;
-  flex-grow: 1;
+#user-input-title,
+#user-input-details {
+  flex: 1;
+  background-color: transparent;
+  border: none;
+  color: white;
+  outline: none;
 }
