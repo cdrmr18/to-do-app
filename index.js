@@ -49,6 +49,12 @@ const editTask = (e) => {
     let taskInput = e.target.parentElement.previousElementSibling.querySelectorAll("input[type=text]")[0];
     let detailsInput = e.target.parentElement.previousElementSibling.querySelectorAll("input[type=text]")[1];
 
+    if (e.target.classList.contains("fa-edit")) {
+        e.target.classList.replace("fa-edit", "fa-check-circle");
+    } else {
+         e.target.classList.replace("fa-check-circle", "fa-edit");
+    }
+
     if (task.classList.contains("edit-mode")) {
         task.classList.toggle("edit-mode");
         details.classList.toggle("edit-mode");
@@ -66,6 +72,7 @@ const editTask = (e) => {
         taskInput.value = task.innerText;
         detailsInput.value = details.innerText ;
     }
+    console.log()
 }
 // FUNCTION TO CREATE NEW DIV WITH NEW TASK ITEM
 const createTask = (e) => {

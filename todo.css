@@ -1,3 +1,6 @@
+.add-new-task-container {
+  min-height: 90px;
+}
 .add-new-task-container,
 .individual-task-container,
 .todo-item,
@@ -19,10 +22,12 @@
   box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
   background-color: white;
   border-radius: 4px;
-  min-height: 88px;
   height: auto;
 }
 
+.individual-task-container {
+  min-height: 72px;
+}
 #complete-tasks {
   opacity: 0.7;
 }
@@ -42,13 +47,11 @@ input.edit-mode {
 
 .task-description,
 .input-task-description {
-  text-transform: capitalize;
   font-weight: 200;
 }
 
 .todo-item,
 .input-todo-item {
-  text-transform: capitalize;
   flex-grow: 1;
 }
 

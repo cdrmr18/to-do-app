@@ -20,11 +20,14 @@ h1,
 h2,
 p,
 span,
-input {
+input,
+input.edit-mode {
   color: gray;
   font-family: "Poppins", sans-serif;
   margin-left: 8px;
-  text-transform: capitalize;
+}
+input.details {
+  font-weight: 200;
 }
 
 form {
@@ -44,8 +47,7 @@ form {
   cursor: pointer;
 }
 
-.fa-plus,
-.far {
+i {
   color: gray;
 }
 /*  */
