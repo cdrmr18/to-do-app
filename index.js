@@ -94,7 +94,7 @@ const createTask = (e) => {
     // creates new task div if title is not empty
     if (task != "") {
         let newTaskItem = `
-            <div class="individual-task-container mt-2">
+            <div class="individual-task-container mt-1 mb-2">
                 <div class="todo-item-container">
                     <div class="todo-item">
                         <input type="text" class="title" value="" maxlength="15">

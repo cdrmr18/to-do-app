@@ -16,7 +16,6 @@ input.edit-mode {
   border-radius: 2px;
   outline: none;
   display: block;
-  color: gray;
 }
 
 #user-input-title,
@@ -31,7 +30,7 @@ input.details {
 }
 input,
 input.edit-mode {
-  color: gray;
+  color: #272142;
   font-family: "Poppins", sans-serif;
   margin-left: 8px;
 }

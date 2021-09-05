@@ -18,14 +18,18 @@
 .progress-header {
   align-items: center;
 }
-
+.add-new-task-container:hover,
+.individual-task-container:hover {
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+  animation: slide-top 0.5s ease-in-out both;
+}
 .add-new-task-container,
 .individual-task-container {
-  box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
   background-color: white;
   border-radius: 4px;
   min-height: 96px;
   height: auto;
+  transition: 0.2s ease-in-out;
 }
 
 .individual-task-container {

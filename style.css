@@ -13,14 +13,14 @@ body {
   background-attachment: fixed;
   background-size: cover;
   height: auto;
-  color: gray;
+  color: #272142;
   font-size: 20px;
 }
 h1,
 h2,
 p,
 span {
-  color: gray;
+  color: #272142;
   font-family: "Poppins", sans-serif;
   margin-left: 8px;
 }
@@ -44,10 +44,23 @@ span {
 .add-new-icon {
   color: white;
   font-size: 24px;
+  transition: 0.2s ease-in-out;
 }
-.drag-icon {
-  padding: 0 16px 0 12px;
+.add-new-icon:hover {
+  color: #c73e51;
+  font-size: 24px;
   cursor: pointer;
+}
+
+.drag-icon {
+  padding: 0 16px 0 6px;
+  cursor: pointer;
+}
+i.fa-check-circle,
+i.fa-edit,
+.drag-icon,
+i.tasks {
+  color: gray;
 }
 i.fa-check-circle:hover,
 i.fa-edit:hover {
@@ -55,6 +68,6 @@ i.fa-edit:hover {
   cursor: pointer;
 }
 i {
-  color: gray;
+  color: #272142;
 }
 /*  */
