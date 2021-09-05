@@ -1,5 +1,6 @@
 .add-new-task-container {
   min-height: 90px;
+  width: 100%;
 }
 .add-new-task-container,
 .individual-task-container,
@@ -7,7 +8,9 @@
 .input-todo-item,
 .todo-item-container,
 .input-todo-container,
-.progress-header {
+.progress-header,
+.input-task-description,
+.task-details {
   display: flex;
 }
 
@@ -38,6 +41,9 @@
 
 .progress-header {
   justify-content: space-between;
+}
+.task-description {
+  border-top: 1px solid rgba(160, 157, 157, 0.781);
 }
 .task-description,
 .input-task-description {

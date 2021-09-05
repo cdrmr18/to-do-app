@@ -9,27 +9,33 @@ body {
 }
 html,
 body {
-  background: linear-gradient(120deg, #ee9ca7, #ffdde1) !important;
+  background: #f6f8f9 !important;
   background-attachment: fixed;
   background-size: cover;
   height: auto;
   color: #272142;
-  font-size: 20px;
+  font-size: 12px;
 }
+h1,
+h2 {
+  font-size: 18px !important;
+}
+
 h1,
 h2,
 p,
 span {
   color: #272142;
   font-family: "Poppins", sans-serif;
-  margin-left: 8px;
 }
 
 /* containers */
-.container {
-  max-width: 90%;
+.container.main {
   border-radius: 4px;
-  height: 100vh;
+  max-width: 500px;
+  height: 80vh;
+  background-color: #e9dcdd;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
 }
 .hero-container {
   display: flex;
@@ -42,13 +48,12 @@ span {
 
 /* icon styles */
 .add-new-icon {
-  color: white;
-  font-size: 24px;
+  color: #272142;
+  font-size: 18px;
   transition: 0.2s ease-in-out;
 }
 .add-new-icon:hover {
   color: #c73e51;
-  font-size: 24px;
   cursor: pointer;
 }
 
@@ -62,12 +67,10 @@ i.fa-edit,
 i.tasks {
   color: gray;
 }
-i.fa-check-circle:hover,
+
 i.fa-edit:hover {
   color: #ee9ca7;
   cursor: pointer;
 }
-i {
-  color: #272142;
-}
+
 /*  */

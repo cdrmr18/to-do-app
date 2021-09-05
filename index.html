@@ -18,13 +18,13 @@
     <title>My To Do App</title>
 </head>
 <body>
-    <div class="container py-4 my-4">
+    <div class="container main py-4 my-4">
         <!-- HERO CONTENT WITH SEARCH BAR -->
         <div class="hero-container row">
             <div class="hero-header col">
                 <h1 class="text-center">My ToDo List</h1>
             </div>
-            <div class="search-container col-sm-9 col-md-6">
+            <div class="search-container col-sm-7 col-md-6">
                 <input id="search-input" class="text-center" type="search" placeholder="Search tasks" onkeyup="searchTodoList(event)" autofocus>
             </div>
         </div>
@@ -35,12 +35,12 @@
         <!-- IN PROGRESS TO TASKS: to do list conatainer -->
         <!-- <h2 class="mt-4">In Progess</h2> -->
         <div class="row">
-            <div class="col-sm-12 col-md-6 ">
+            <div class="col-sm-12 col-md-6">
 
                 <!-- ADD NEW TASK: add new task to the to do list -->
                 <!-- -->
                 <div class="progress-header">
-                    <div><h2>In Progess</h2></div>
+                    <div><h2 class="mb-0">In Progess</h2></div>
                     <div class="text-center" onClick="openAddTask()"> <span><i class="fas fa-plus-circle add-new-icon"></i></i></span></div>
                 </div>
 
@@ -49,14 +49,21 @@
                         <form name="addTaskForm" required>
                             <div class="input-todo-container">
                                 <div class="task-input-container">
-                                    <div class="task-details">
-                                        <i class="far fa-check-circle"></i>
-                                        <input id="user-input-title" type="text" placeholder="Write a task name">
+                                    <div class="task-details mb-4">
+                                        <div class="add-icon-main pe-2">
+                                            <i class="far fa-check-circle"></i>
+                                        </div>
+                                       <div>
+                                            <input id="user-input-title" type="text" placeholder="Write a task name" maxlength="17">
+                                       </div>
                                     </div>
                                     <div class="input-task-description">
-                                        <i class="fas fa-tasks tasks"></i>
-                                        <input id="user-input-details" class="mt-2" type="text" maxlength="20"
-                                            placeholder="Add task details">
+                                        <div>
+                                            <i class="fas fa-tasks tasks pe-2"></i>
+                                        </div>
+                                        <div>
+                                            <input id="user-input-details" type="text" maxlength="20" placeholder="Add task note">
+                                        </div>
                                     </div>
                                 </div>
                             </div>
@@ -70,18 +77,18 @@
                 </div>
                 
                 <!-- new added task go in this div  -->
-                <div class="to-do-list-items  ">
+                <div class="to-do-list-items">
                     <!-- each to do task is listed here-->
                     <div class="individual-task-container mt-1 mb-4">
                         <div class="todo-item-container">
                             <div class="todo-item">
                                 <input type="text" class="title" value="" maxlength="15">
-                                <p class="mt-0"> <span>swim</span></p>
+                                <p class="mt-0 mb-0"> <span>swim</span></p>
                             </div>
                 
                             <div class="task-description">
                                 <input type="text" class="details" value="" maxlength="17">
-                                <p class="mb-0"> <span>lake</span></p>
+                                <p class="mb-0 mt-1"> <span>lake</span></p>
                             </div>
                         </div>
                         <div class="edit-icon">
