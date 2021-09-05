@@ -5,15 +5,13 @@ const draggableCompleted = document.getElementById("complete-tasks");
     // in progress tasks
 new Sortable(draggableInProgress, {
     group: 'shared', // set both lists to same group
-    animation: 150,
-    ghostClass: 'blue-background-class'
+    animation: 150
 });
 
     // completed tasks
 new Sortable(draggableCompleted, {
     group: 'shared',
-    animation: 150,
-    ghostClass: 'blue-background-class'
+    animation: 150
 });
 // END
 
@@ -61,7 +59,7 @@ const createTask = (e) => {
                 </div>
 
                 <div class="task-description" contenteditable="true">
-                <p class="mb-0"><i class="far fa-edit"></i> <span>${(details) ? details[0].toUpperCase() + details.slice(1) : ""}</span></p>
+                <p class="mb-0"><i class="fas fa-long-arrow-alt-right"></i> <span>${(details) ? details[0].toUpperCase() + details.slice(1) : ""}</span></p>
    
                 </div>
             </div>

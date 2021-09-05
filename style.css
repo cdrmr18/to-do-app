@@ -13,17 +13,23 @@ body {
   background-size: cover;
   height: auto;
   color: gray;
+  font-size: 20px;
 }
 h1,
-h2 {
+h2,
+p,
+span {
   color: gray;
+  margin-left: 16px;
 }
+
 form {
   display: flex;
   align-items: center;
 }
-
-/* class & id styles */
+form input {
+  color: gray;
+}
 
 .container {
   max-width: 90%;
@@ -31,14 +37,17 @@ form {
   height: 100vh;
 }
 
+/* icon styles */
 .drag-icon {
   padding: 0 16px 0 12px;
   cursor: pointer;
 }
 
-.fa-plus {
+.fa-plus,
+.far {
   color: gray;
 }
+/*  */
 
 .hero-container {
   display: flex;
