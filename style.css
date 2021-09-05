@@ -46,7 +46,11 @@ form {
   padding: 0 16px 0 12px;
   cursor: pointer;
 }
-
+i.fa-check-circle:hover,
+i.fa-edit:hover {
+  color: #ee9ca7;
+  cursor: pointer;
+}
 i {
   color: gray;
 }

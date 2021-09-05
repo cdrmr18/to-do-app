@@ -42,6 +42,7 @@ const deleteTask = (e) => {
 }
 
 const editTask = (e) => { 
+    e.preventDefault()
     // current task info
     let task = e.target.parentElement.previousElementSibling.querySelector('p');
     let details = e.target.parentElement.previousElementSibling.querySelector('.task-description p');
@@ -76,7 +77,7 @@ const editTask = (e) => {
 }
 // FUNCTION TO CREATE NEW DIV WITH NEW TASK ITEM
 const createTask = (e) => {
-    e.preventDefault();
+    e.preventDefault()
     let toDoList = document.querySelector('.to-do-list-items');
     let task = document.getElementById('user-input-title').value;
     let details = document.getElementById('user-input-details').value;
@@ -84,24 +85,28 @@ const createTask = (e) => {
     // creates new task div if title is not empty
     if (task != "") {
         let newTaskItem = `
-        <div class="individual-task-container mt-2">
-            <div class="todo-item-container">
-                <div class="todo-item" contenteditable="true">
-                 <p class="mt-0"><i class="fas fa-walking"></i> <span>${task[0].toUpperCase() + task.slice(1)}</span></p>
+            <div class="individual-task-container mt-2">
+                <div class="todo-item-container">
+                    <div class="todo-item">
+                        <input type="text" class="title" value="" maxlength="15">
+                        <p class="mt-0""> <span>${task[0].toUpperCase() + task.slice(1)}</span></p>
+                    </div>
+                    
+                    <div class="task-description">
+                        <input type="text" class="details" value="" maxlength="17">
+                        <p class="mb-0""> <span>${(details) ? details[0].toUpperCase() + details.slice(1) : ""}</span></p>
+                    </div>
                 </div>
-
-                <div class="task-description" contenteditable="true">
-                <p class="mb-0"> <span>${(details) ? details[0].toUpperCase() + details.slice(1) : ""}</span></p>
-   
+                <div class="edit-icon">
+                    <i class="far fa-edit" onclick="editTask(event)"></i>
                 </div>
-            </div>
-            <div onclick="deleteTask(event)">
-                <button class="btn delete-button-bg">🗑️</button>
-            </div>
-            <div class="drag-icon">
-                <i class="fas fa-bars"></i>
-            </div>
-        </div>        
+                <div onclick="deleteTask(event)">
+                    <button class="btn delete-button-bg">🗑️</button>
+                </div>
+                <div class="drag-icon">
+                    <i class="fas fa-bars"></i>
+                </div>
+            </div>        
         `;
     
         toDoList.insertAdjacentHTML('beforebegin', newTaskItem);
@@ -112,4 +117,5 @@ const createTask = (e) => {
         alert("Task name cannot be empty");
         return;
     }
+    console.log()
 }
