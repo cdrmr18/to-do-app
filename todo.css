@@ -27,6 +27,19 @@
   opacity: 0.7;
 }
 
+p.edit-mode,
+.to-do-list-items input {
+  display: none;
+}
+
+input.edit-mode {
+  width: 90%;
+  border: none;
+  outline: none;
+  display: block;
+  color: gray;
+}
+
 .task-description,
 .input-task-description {
   text-transform: capitalize;

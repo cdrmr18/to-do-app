@@ -29,7 +29,6 @@ const searchTodoList = (e) => {
 
         if (titleValue.toUpperCase().indexOf(filter) > -1 ) {
             item.parentNode.parentNode.style.display = '';
-            console.log(1)
         } else {
             item.parentNode.parentNode.style.display = 'none';
         }
@@ -42,8 +41,31 @@ const deleteTask = (e) => {
     todoTask.remove();
 }
 
-const editTask = (e) => {
-    console.log(e.target)
+const editTask = (e) => { 
+    // current task info
+    let task = e.target.parentElement.previousElementSibling.querySelector('p');
+    let details = e.target.parentElement.previousElementSibling.querySelector('.task-description p');
+    // input for editing
+    let taskInput = e.target.parentElement.previousElementSibling.querySelectorAll("input[type=text]")[0];
+    let detailsInput = e.target.parentElement.previousElementSibling.querySelectorAll("input[type=text]")[1];
+
+    if (task.classList.contains("edit-mode")) {
+        task.classList.toggle("edit-mode");
+        details.classList.toggle("edit-mode");
+        taskInput.classList.toggle("edit-mode");
+        detailsInput.classList.toggle("edit-mode");
+        
+        task.innerText = taskInput.value;
+        details.innerText = detailsInput.value;
+    } else {
+        task.classList.toggle("edit-mode");
+        details.classList.toggle("edit-mode");
+        taskInput.classList.toggle("edit-mode");
+        detailsInput.classList.toggle("edit-mode");
+
+        taskInput.value = task.innerText;
+        detailsInput.value = details.innerText ;
+    }
 }
 // FUNCTION TO CREATE NEW DIV WITH NEW TASK ITEM
 const createTask = (e) => {
@@ -76,9 +98,11 @@ const createTask = (e) => {
         `;
     
         toDoList.insertAdjacentHTML('beforebegin', newTaskItem);
-    }
+        document.getElementById('user-input-title').value = "";
+        document.getElementById('user-input-details').value = "";
 
-    document.getElementById('user-input-title').value = "";
-    document.getElementById('user-input-details').value = "";
-    
+    } else {
+        alert("Task name cannot be empty");
+        return;
+    }
 }

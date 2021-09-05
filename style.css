@@ -20,10 +20,11 @@ h1,
 h2,
 p,
 span,
-form input {
+input {
   color: gray;
   font-family: "Poppins", sans-serif;
   margin-left: 8px;
+  text-transform: capitalize;
 }
 
 form {
