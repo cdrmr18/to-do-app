@@ -16,4 +16,5 @@
 #search-input {
   border: none;
   outline: none;
+  opacity: 0.6;
 }

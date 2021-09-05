@@ -42,6 +42,9 @@ const deleteTask = (e) => {
     todoTask.remove();
 }
 
+const editTask = (e) => {
+    console.log(e.target)
+}
 // FUNCTION TO CREATE NEW DIV WITH NEW TASK ITEM
 const createTask = (e) => {
     e.preventDefault();
@@ -59,7 +62,7 @@ const createTask = (e) => {
                 </div>
 
                 <div class="task-description" contenteditable="true">
-                <p class="mb-0"><i class="fas fa-long-arrow-alt-right"></i> <span>${(details) ? details[0].toUpperCase() + details.slice(1) : ""}</span></p>
+                <p class="mb-0"> <span>${(details) ? details[0].toUpperCase() + details.slice(1) : ""}</span></p>
    
                 </div>
             </div>

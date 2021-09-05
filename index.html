@@ -24,7 +24,7 @@
                 <h1 class="text-center">My ToDo List</h1>
             </div>
             <div class="search-container">
-                <input id="search-input" type="search" placeholder="Search tasks" onkeyup="searchTodoList(event)" autofocus>
+                <input id="search-input" class="text-center" type="search" placeholder="Search..." onkeyup="searchTodoList(event)" autofocus>
             </div>
         </div>
         <!-- END -->
@@ -36,10 +36,10 @@
                     <div class="task-input-container">
                         <div class="task-details">
                             <i class="far fa-check-circle"></i>
-                            <input id="user-input-title" name="ftitle" type="text" placeholder="Write a task name" >
+                            <input id="user-input-title" type="text" placeholder="Write a task name" >
                         </div>
                         <div class="input-task-description">
-                            <i class="far fa-edit"></i>
+                            <i class="fas fa-tasks"></i>
                             <input id="user-input-details" class="mt-2" type="text" maxlength="20" placeholder="Enter task details" >
                         </div>
                     </div>
@@ -59,13 +59,16 @@
                 <!-- each to do task is listed here-->
                 <div class="individual-task-container mt-2">
                     <div class="todo-item-container">
-                        <div class="todo-item" contenteditable="true">
-                            <p class="mt-0"><i class="fas fa-walking"></i> <span>swim</span></p>
+                        <div class="todo-item">
+                            <p class="mt-0"> <span>swim</span></p>
                         </div>
                         
-                        <div class="task-description" contenteditable="true">
-                            <p class="mb-0"><i class="fas fa-long-arrow-alt-right"></i> <span>lake</span></p>
+                        <div class="task-description">
+                            <p class="mb-0"> <span>lake</span></p>
                         </div>
+                    </div>
+                    <div class="edit-icon">
+                        <i class="far fa-edit" onclick="editTask(event)"></i>
                     </div>
                     <div onclick="deleteTask(event)">
                         <button class="btn delete-button-bg">🗑️</button>
@@ -83,13 +86,16 @@
                 <!-- each completed to do task is listed here-->
                 <div class="individual-task-container mt-2">
                     <div class="todo-item-container">
-                        <div class="todo-item" contenteditable="true">
-                            <p class="mt-0"><i class="fas fa-walking"></i> <span>swim</span></p>    
+                        <div class="todo-item">
+                            <p class="mt-0"> <span>swim</span></p>    
                         </div>
                 
-                        <div class="task-description" contenteditable="true">  
-                            <p class="mb-0"><i class="fas fa-long-arrow-alt-right"></i> <span>lake</span></p>
+                        <div class="task-description">  
+                            <p class="mb-0"><span>lake</span></p>
                         </div>
+                    </div>
+                    <div class="edit-icon">
+                        <i class="far fa-edit" onclick="editTask(event)"></i>
                     </div>
                     <div onclick="deleteTask(event)">
                         <button class="btn delete-button-bg">🗑️</button>
