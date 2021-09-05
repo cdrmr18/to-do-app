@@ -1,0 +1,37 @@
+form {
+  display: flex;
+  align-items: center;
+}
+
+p.edit-mode,
+.to-do-list-items input,
+input.title,
+input.details {
+  display: none;
+}
+
+input.edit-mode {
+  width: 90%;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  border-radius: 2px;
+  outline: none;
+  display: block;
+  color: gray;
+}
+
+#user-input-title,
+#user-input-details {
+  background-color: transparent;
+  border: none;
+  outline: none;
+}
+
+input.details {
+  font-weight: 200;
+}
+input,
+input.edit-mode {
+  color: gray;
+  font-family: "Poppins", sans-serif;
+  margin-left: 8px;
+}

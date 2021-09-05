@@ -19,27 +19,26 @@ body {
 h1,
 h2,
 p,
-span,
-input,
-input.edit-mode {
+span {
   color: gray;
   font-family: "Poppins", sans-serif;
   margin-left: 8px;
 }
-input.details {
-  font-weight: 200;
-}
 
-form {
-  display: flex;
-  align-items: center;
-}
-
+/* containers */
 .container {
   max-width: 90%;
   border-radius: 4px;
   height: 100vh;
 }
+.hero-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 48px;
+}
+/*  */
 
 /* icon styles */
 .drag-icon {
@@ -55,11 +54,3 @@ i {
   color: gray;
 }
 /*  */
-
-.hero-container {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  margin-bottom: 48px;
-}

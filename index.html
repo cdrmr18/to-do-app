@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="search.css">
     <link rel="stylesheet" href="todo.css">
     <link rel="stylesheet" href="todo.css">
+    <link rel="stylesheet" href="input.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
     <script src="https://kit.fontawesome.com/3e929ff82b.js" crossorigin="anonymous"></script>
@@ -19,18 +20,19 @@
 <body>
     <div class="container py-4 my-4">
         <!-- HERO CONTENT WITH SEARCH BAR -->
-        <div class="hero-container">
-            <div class="hero-header">
+        <div class="hero-container row">
+            <div class="hero-header col">
                 <h1 class="text-center">My ToDo List</h1>
             </div>
-            <div class="search-container">
+            <div class="search-container col-sm-12 col-md-6">
                 <input id="search-input" class="text-center" type="search" placeholder="Search..." onkeyup="searchTodoList(event)" autofocus>
             </div>
         </div>
         <!-- END -->
-
+    <div class="row add-new">
         <!-- ADD NEW TASK: add new task to the to do list -->
-        <div class="add-new-task-container">
+        <!-- <h2>Add Tasks</h2> -->
+        <div class="add-new-task-container col-sm-12 col-md-6">
             <form name="addTaskForm" required>
                 <div class="input-todo-container">
                     <div class="task-input-container">
@@ -40,7 +42,7 @@
                         </div>
                         <div class="input-task-description">
                             <i class="fas fa-tasks"></i>
-                            <input id="user-input-details" class="mt-2" type="text" maxlength="20" placeholder="Enter task details" >
+                            <input id="user-input-details" class="mt-2" type="text" maxlength="20" placeholder="Add task details" >
                         </div>
                     </div>
                 </div>
@@ -52,62 +54,69 @@
             </form>
         </div>
         <!-- END -->
-
+ </div>
+ 
+ <div class="row">
         <!-- IN PROGRESS TO TASKS: to do list conatainer -->
-            <h2 class="mt-4">In Progess</h2>
-            <div class="to-do-list-items">
-                <!-- each to do task is listed here-->
-                <div class="individual-task-container mt-2">
-                    <div class="todo-item-container">
-                        <div class="todo-item">
-                            <input type="text" class="title" value="" maxlength="15">
-                            <p class="mt-0"> <span>swim</span></p>
-                        </div>
-                        
-                        <div class="task-description">
-                            <input type="text" class="details" value="" maxlength="17">
-                            <p class="mb-0"> <span>lake</span></p>
-                        </div>
+        <!-- <h2 class="mt-4">In Progess</h2> -->
+        <div class="to-do-list-items col-sm-12 col-md-6 ">
+            <!-- each to do task is listed here-->
+            <div class="individual-task-container mt-2">
+                <div class="todo-item-container">
+                    <div class="todo-item">
+                        <input type="text" class="title" value="" maxlength="15">
+                        <p class="mt-0"> <span>swim</span></p>
                     </div>
-                    <div class="edit-icon">
-                        <i class="far fa-edit" onclick="editTask(event)"></i>
-                    </div>
-                    <div onclick="deleteTask(event)">
-                        <button class="btn delete-button-bg">🗑️</button>
-                    </div>
-                    <div class="drag-icon">
-                        <i class="fas fa-bars"></i>
-                    </div>
-                </div>            
-            </div>
-            <!-- END -->
-            
-            <!-- COMPLETED TODO TASKS: to do list conatainer -->
-            <h2 class="mt-4">Completed</h2>
-            <div id="complete-tasks">
-                <!-- each completed to do task is listed here-->
-                <div class="individual-task-container mt-2">
-                    <div class="todo-item-container">
-                        <div class="todo-item">
-                            <p class="mt-0"> <span>swim</span></p>    
-                        </div>
-                
-                        <div class="task-description">  
-                            <p class="mb-0"><span>lake</span></p>
-                        </div>
-                    </div>
-                    <div class="edit-icon">
-                        <i class="far fa-edit" onclick="editTask(event)"></i>
-                    </div>
-                    <div onclick="deleteTask(event)">
-                        <button class="btn delete-button-bg">🗑️</button>
-                    </div>
-                    <div class="drag-icon">
-                        <i class="fas fa-bars"></i>
+                    
+                    <div class="task-description">
+                        <input type="text" class="details" value="" maxlength="17">
+                        <p class="mb-0"> <span>lake</span></p>
                     </div>
                 </div>
+                <div class="edit-icon">
+                    <i class="far fa-edit" onclick="editTask(event)"></i>
+                </div>
+                <div onclick="deleteTask(event)">
+                    <button class="btn delete-button-bg">🗑️</button>
+                </div>
+                <div class="drag-icon">
+                    <i class="fas fa-bars"></i>
+                </div>
+            </div>  
+
+        </div>
+        <!-- END -->
+        
+        <!-- COMPLETED TODO TASKS: to do list conatainer -->
+        <!-- <h2 class="mt-4">Completed</h2> -->
+        <div id="complete-tasks" class="col-sm-12  col-md-6">
+            <!-- each completed to do task is listed here-->
+            <div class="individual-task-container mt-2">
+                <div class="todo-item-container">
+                    <div class="todo-item">
+                        <input type="text" class="title" value="" maxlength="15">
+                        <p class="mt-0"> <span>jump</span></p>
+                    </div>
+            
+                    <div class="task-description">
+                        <input type="text" class="details" value="" maxlength="17">
+                        <p class="mb-0"> <span>lake</span></p>
+                    </div>
+                </div>
+                <div class="edit-icon">
+                    <i class="far fa-edit" onclick="editTask(event)"></i>
+                </div>
+                <div onclick="deleteTask(event)">
+                    <button class="btn delete-button-bg">🗑️</button>
+                </div>
+                <div class="drag-icon">
+                    <i class="fas fa-bars"></i>
+                </div>
             </div>
-            <!-- END -->
+
+        </div>
+        <!-- END -->
+        </div>
     </div>
 
 <script src="index.js"></script>

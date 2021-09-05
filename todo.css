@@ -32,22 +32,6 @@
   opacity: 0.7;
 }
 
-p.edit-mode,
-.to-do-list-items input,
-input.title,
-input.details {
-  display: none;
-}
-
-input.edit-mode {
-  width: 90%;
-  border: 1px solid rgba(0, 0, 0, 0.2);
-  border-radius: 2px;
-  outline: none;
-  display: block;
-  color: gray;
-}
-
 .task-description,
 .input-task-description {
   font-weight: 200;
@@ -78,16 +62,11 @@ input.edit-mode {
 }
 
 .to-do-list-items,
-.new-task-item,
-#complete-tasks {
+.new-task-item {
   width: 100%;
   border-radius: 4px;
 }
 
-#user-input-title,
-#user-input-details {
-  /* flex: 1; */
-  background-color: transparent;
-  border: none;
-  outline: none;
+.row.add-new {
+  justify-content: center;
 }

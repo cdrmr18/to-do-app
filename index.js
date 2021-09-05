@@ -73,7 +73,6 @@ const editTask = (e) => {
         taskInput.value = task.innerText;
         detailsInput.value = details.innerText ;
     }
-    console.log()
 }
 // FUNCTION TO CREATE NEW DIV WITH NEW TASK ITEM
 const createTask = (e) => {
