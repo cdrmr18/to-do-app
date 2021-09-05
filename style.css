@@ -41,6 +41,10 @@ span {
 /*  */
 
 /* icon styles */
+.add-new-icon {
+  color: white;
+  font-size: 24px;
+}
 .drag-icon {
   padding: 0 16px 0 12px;
   cursor: pointer;

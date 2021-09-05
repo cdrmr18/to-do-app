@@ -6,14 +6,16 @@
 .todo-item,
 .input-todo-item,
 .todo-item-container,
-.input-todo-container {
+.input-todo-container,
+.progress-header {
   display: flex;
 }
 
 .add-new-task-container,
 .individual-task-container,
 .todo-item,
-.input-todo-item {
+.input-todo-item,
+.progress-header {
   align-items: center;
 }
 
@@ -22,16 +24,17 @@
   box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
   background-color: white;
   border-radius: 4px;
+  min-height: 96px;
   height: auto;
 }
 
 .individual-task-container {
   min-height: 72px;
 }
-#complete-tasks {
-  opacity: 0.7;
-}
 
+.progress-header {
+  justify-content: space-between;
+}
 .task-description,
 .input-task-description {
   font-weight: 200;
@@ -69,4 +72,7 @@
 
 .row.add-new {
   justify-content: center;
+}
+#add-new-div {
+  display: none;
 }

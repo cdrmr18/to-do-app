@@ -36,6 +36,16 @@ const searchTodoList = (e) => {
 }
 
 
+const openAddTask = () => {
+    const addTaskDiv = document.getElementById('add-new-div');
+    console.log('1')
+    if (addTaskDiv.style.display === "block") {
+        addTaskDiv.style.display = "none";
+    } else {
+        addTaskDiv.style.display = "block";
+    }
+}
+
 const deleteTask = (e) => {
     let todoTask = e.target.parentElement.parentElement;
     todoTask.remove();
@@ -108,7 +118,7 @@ const createTask = (e) => {
             </div>        
         `;
     
-        toDoList.insertAdjacentHTML('beforebegin', newTaskItem);
+        toDoList.insertAdjacentHTML('afterbegin', newTaskItem);
         document.getElementById('user-input-title').value = "";
         document.getElementById('user-input-details').value = "";
 
@@ -116,5 +126,4 @@ const createTask = (e) => {
         alert("Task name cannot be empty");
         return;
     }
-    console.log()
 }
